@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Link, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage.js'; // Adjust this import based on your folder structure
+import UploadPage from './components/UploadForm.js'; // Adjust this import based on your folder structure
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <nav>
+          <ul>
+            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/upload">Upload Video</Link></li>
+          </ul>
+        </nav>
       </header>
+
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/upload" element={<UploadPage />} />
+      </Routes>
     </div>
   );
 }
 
 export default App;
+
