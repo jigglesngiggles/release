@@ -21,11 +21,14 @@
             padding: 20px;
             border-radius: 8px;
             max-width: 800px;
+            width: 100%;
         }
         video {
-            width: 100%;
-            max-width: 750px;
+            width: 100%; /* Ensures the video takes up the full container width */
+            max-width: 750px; /* Limit the max width to prevent the video from stretching too wide */
+            height: auto; /* Keeps the aspect ratio intact */
             border-radius: 8px;
+            background-color: #000; /* Makes sure there's a background color behind the video in case of issues */
         }
         h1 {
             color: #333;
