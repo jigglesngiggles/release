@@ -24,11 +24,11 @@
             width: 100%;
         }
         video {
-            width: 100%; /* Ensures the video takes up the full container width */
-            max-width: 750px; /* Limit the max width to prevent the video from stretching too wide */
-            height: auto; /* Keeps the aspect ratio intact */
+            width: 100%;
+            max-width: 750px;
+            height: auto;
             border-radius: 8px;
-            background-color: #000; /* Makes sure there's a background color behind the video in case of issues */
+            background-color: #000;
         }
         h1 {
             color: #333;
@@ -38,8 +38,8 @@
 <body>
     <div class="video-container">
         <h1>Watch This Video!</h1>
-        <video controls>
-            <source src="videos/video.mp4" type="video/mp4">
+        <video controls preload="auto" muted autoplay>
+            <source src="videos/VID12.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
